@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.Scene?>
+<?import javafx.stage.Stage?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+    <TabPane>
+        <Tab text="Buku">
+            <VBox>
+                <fx:include source="Buku.fxml"/>
+            </VBox>
+        </Tab>
+        <Tab text="Pelanggan">
+            <VBox>
+                <fx:include source="Pelanggan.fxml"/>
+            </VBox>
+        </Tab>
+        <Tab text="Penjualan">
+            <VBox>
+                <fx:include source="Penjualan.fxml"/>
+            </VBox>
+        </Tab>
+    </TabPane>
+</AnchorPane>

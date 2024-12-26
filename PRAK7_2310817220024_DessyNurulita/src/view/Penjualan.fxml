@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PenjualanController">
+    <HBox spacing="10">
+        <Label text="Jumlah:"/>
+        <TextField fx:id="jumlahField" />
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Tanggal:"/>
+        <DatePicker fx:id="tanggalPicker" />
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Pelanggan:"/>
+        <ComboBox fx:id="pelangganComboBox" />
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Buku:"/>
+        <ComboBox fx:id="bukuComboBox" />
+    </HBox>
+    
+    <HBox spacing="10">
+        <Button text="Tambah" onAction="#handleAdd"/>
+         <Button text="Hapus" onAction="#handleDelete"/>
+          <Button text="Edit" onAction="#handleUpdate"/>
+    </HBox>
+
+    <TableView fx:id="tableView">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" />
+            <TableColumn fx:id="jumlahColumn" text="Jumlah" />
+            <TableColumn fx:id="totalHargaColumn" text="Total Harga" />
+            <TableColumn fx:id="tanggalColumn" text="Tanggal" />
+        </columns>
+    </TableView>
+</VBox>

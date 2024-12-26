@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PelangganController">
+    <HBox spacing="10">
+        <Label text="Nama:"/>
+        <TextField fx:id="namaField" />
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Email:"/>
+        <TextField fx:id="emailField" />
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Telepon:"/>
+        <TextField fx:id="teleponField" />
+    </HBox>
+    
+    <HBox spacing="10">
+        <Button text="Tambah" onAction="#handleAdd"/>
+        <Button text="Update" onAction="#handleUpdate"/>
+        <Button text="Hapus" onAction="#handleDelete"/>
+    </HBox>
+
+    <TableView fx:id="tableView">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" />
+            <TableColumn fx:id="namaColumn" text="Nama" />
+            <TableColumn fx:id="emailColumn" text="Email" />
+            <TableColumn fx:id="teleponColumn" text="Telepon" />
+        </columns>
+    </TableView>
+</VBox>

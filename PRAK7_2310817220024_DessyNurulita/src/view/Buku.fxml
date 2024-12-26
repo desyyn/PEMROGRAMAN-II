@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="15" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="controller.BukuController">
+    <!-- Input Fields Section -->
+    <VBox spacing="10">
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Judul:" />
+            <TextField fx:id="judulField" prefWidth="200" />
+        </HBox>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Penulis:" />
+            <TextField fx:id="penulisField" prefWidth="200" />
+        </HBox>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Harga:" />
+            <TextField fx:id="hargaField" prefWidth="200" />
+        </HBox>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Stok:" />
+            <TextField fx:id="stokField" prefWidth="200" />
+        </HBox>
+    </VBox>
+
+    <!-- Buttons Section -->
+    <HBox spacing="15" alignment="CENTER">
+        <Button onAction="#handleAdd" text="Tambah" prefWidth="80" />
+        <Button onAction="#handleUpdate" text="Update" prefWidth="80" />
+        <Button onAction="#handleDelete" text="Hapus" prefWidth="80" />
+    </HBox>
+
+    <!-- TableView Section -->
+    <TableView fx:id="tableView" prefHeight="300" prefWidth="500">
+        <columns>
+            <TableColumn fx:id="bukuIdColumn" text="ID" prefWidth="50" />
+            <TableColumn fx:id="judulColumn" text="Judul" prefWidth="150" />
+            <TableColumn fx:id="penulisColumn" text="Penulis" prefWidth="150" />
+            <TableColumn fx:id="hargaColumn" text="Harga" prefWidth="100" />
+            <TableColumn fx:id="stokColumn" text="Stok" prefWidth="50" />
+        </columns>
+    </TableView>
+</VBox>
